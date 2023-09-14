@@ -3,7 +3,7 @@ const palindromePermutation = (str) => {
     const charMap = new Map(); //frequency of each char in string
     str = str.replace(/\s/g, '').toLowerCase();
     //remove spaces and convert string to lower case
-
+  //
     for (const char of str) {
         if (charMap.has(char)) {
           charMap.set(char, charMap.get(char) + 1);

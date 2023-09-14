@@ -4,7 +4,7 @@ class Node {
         this.next = null;
     }
 }
-
+//
 const palindrome = (head) => {
     if (!head || !head.next) {
         return true; 
