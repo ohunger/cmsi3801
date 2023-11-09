@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Click Counter</title>
+</head>
+<body>
+  <button id="clickButton">click me</button>
+  <p>Click count: <span id="clickCount">0</span></p>
+
+  <script>
+    function createClickCounter() {
+      let clickCount = 0;
+      
+      // This is the closure function
+      function updateClickCount() {
+        clickCount++;
+        document.getElementById('clickCount').textContent = clickCount;
+      }
+
+      return updateClickCount;
+    }
+
+    // Create a closure by calling the outer function
+    const clickCounter = createClickCounter();
+
+    // Attach the closure function to the button's click event
+    document.getElementById('clickButton').addEventListener('click', clickCounter);
+  </script>
+</body>
+</html>
